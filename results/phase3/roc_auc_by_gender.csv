@@ -1,0 +1,11 @@
+profession,gender,auc
+dentist,Female,0.9988640307973872
+dentist,Male,0.9985314685314686
+nurse,Female,0.9889969135802469
+nurse,Male,0.9848689138576779
+physician,Female,0.9690721649484536
+physician,Male,0.9687444692223285
+psychologist,Female,0.9978922011442336
+psychologist,Male,0.998632154882155
+surgeon,Female,0.9709514563106795
+surgeon,Male,0.98241919238165

@@ -1,0 +1,27 @@
+{
+  "dentist": {
+    "female": 0.1,
+    "male": 0.1,
+    "eo_gap": 0.0
+  },
+  "nurse": {
+    "female": 0.1,
+    "male": 0.1,
+    "eo_gap": 0.0
+  },
+  "physician": {
+    "female": 0.1,
+    "male": 0.1,
+    "eo_gap": 0.0
+  },
+  "psychologist": {
+    "female": 0.1,
+    "male": 0.1,
+    "eo_gap": 0.0
+  },
+  "surgeon": {
+    "female": 0.5500000000000002,
+    "male": 0.8500000000000003,
+    "eo_gap": 0.003283582089552234
+  }
+}

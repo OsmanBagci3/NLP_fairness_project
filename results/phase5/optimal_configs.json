@@ -1,0 +1,23 @@
+{
+  "balanced": {
+    "config": "\u03bb=0.1 (eo)",
+    "category": "In-processing",
+    "accuracy": 0.975,
+    "mean_gap": 0.0709,
+    "composite": 0.9041
+  },
+  "max_accuracy": {
+    "config": "\u03bb=0.1 (eo)",
+    "category": "In-processing",
+    "accuracy": 0.975,
+    "mean_gap": 0.0709,
+    "composite": 0.9041
+  },
+  "max_fairness": {
+    "config": "\u03bb=1.0 (dp)",
+    "category": "In-processing",
+    "accuracy": 0.969,
+    "mean_gap": 0.0661,
+    "composite": 0.9029
+  }
+}

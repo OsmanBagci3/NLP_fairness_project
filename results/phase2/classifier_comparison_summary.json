@@ -1,0 +1,55 @@
+{
+  "best_tradeoff": "MLP",
+  "most_fair": "Logistic Regression",
+  "best_accuracy": "MLP",
+  "scores": {
+    "accuracy": {
+      "Random Forest": 0.899,
+      "Logistic Regression": 0.968,
+      "SVM (RBF)": 0.969,
+      "MLP": 0.974
+    },
+    "accuracy_female": {
+      "Random Forest": 0.8963,
+      "Logistic Regression": 0.9778,
+      "SVM (RBF)": 0.9759,
+      "MLP": 0.9815
+    },
+    "accuracy_male": {
+      "Random Forest": 0.9022,
+      "Logistic Regression": 0.9565,
+      "SVM (RBF)": 0.9609,
+      "MLP": 0.9652
+    },
+    "delta_dp": {
+      "Random Forest": 0.1741,
+      "Logistic Regression": 0.1634,
+      "SVM (RBF)": 0.1676,
+      "MLP": 0.1632
+    },
+    "delta_eo": {
+      "Random Forest": 0.172,
+      "Logistic Regression": 0.0346,
+      "SVM (RBF)": 0.0555,
+      "MLP": 0.0421
+    },
+    "delta_eqodds": {
+      "Random Forest": 0.172,
+      "Logistic Regression": 0.0355,
+      "SVM (RBF)": 0.0555,
+      "MLP": 0.0421
+    },
+    "mean_gap": {
+      "Random Forest": 0.1727,
+      "Logistic Regression": 0.0778,
+      "SVM (RBF)": 0.0929,
+      "MLP": 0.0824
+    },
+    "composite_score": {
+      "Random Forest": 0.7263,
+      "Logistic Regression": 0.8902,
+      "SVM (RBF)": 0.8761,
+      "MLP": 0.8916
+    }
+  }
+}
