@@ -1,0 +1,58 @@
+Partie de Osman - l'interprétabilité du modèle
+Points à explorer sur cette partie :
+
+########Quelles techniques pour l'explicabilité ?
+		Ici on cherche à comprendre comment, pourquoi le modèle a fourni un résultat.
+
+Pour cela on peut utiliser différentes méthodes :
+On peut essayer d'enlever/masquer des mots du texte et voir si la décision du modèle change drastiquement ou non.
+On peut essayer de modifier légèrement le texte pour voir si le modèle prend une décision différente.
+
+
+########Il existe 3 types d'approche pour expliquer les décisions du modèle : Scope (local/global), Stage (Modèle interprétable par nature/black box), Exemple-based(contrefactuel/adversarial/Prototype & criticisme)
+		Scope local : On regarde une prédiction spécifique
+		Scope global : On cherche à comprendre le comportement du modèle dans son ensemble
+		Stage Ante-Hoc : Modèle interprétable par nature
+		Stage post-Hoc : black box
+			Exemple based contrefactuel : bouger un peu les paramètres et voir si la décision change
+			Exemple based Adversarial : Essayer de tromper le modèle pour comprendre les failles et les limites
+			Prototype & critisicme : exemples typiques (prototype) vs exemple atypique(critiscime) et voir le comportement du modèle
+		Utiliser des modèles opaques et y ajouter une couche de post-hoc interpretability ?
+		By design? explication pendant l'entaînement. je pense que ce n'est pas faisable car on prend un modèle de fondation déjà entrainé et on travaille dessus sans changer (ou très peu) les param.
+
+Pq un DNN n'est pas interprétable ? information réparti sur des milliers de neuronnes (redondance), instabilité et chaos (noisy gradient), nombre de couche trop important.
+
+Méthode d'interprétabilité post-hoc : importance des features/chgt minime des features, saliency maps, concept-based explanation, sample based
+
+Utiliser le Shapley value? formule p33
+Saliency methods?
+LIME (Local Interpretable Model-Agnostic Explanations) methods
+Layer-wise relevance propagation
+##################
+
+l'explicabilité doit répondre à :
+	Quels mots influencent la prédiction ?
+	Quels patterns linguistiques le modèle a-t-il appris ?
+	Comment les biais de genre se manifestent-ils ?
+	Quels indices contextuels sont critiques ?
+SHAPLEY VALUE : Les valeurs de Shapley distribuent équitablement la "contribution" de chaque feature à la prédiction finale. Pour le NLP, chaque token reçoit une valeur SHAP.
+
+LIME explique une prédiction en apprenant un modèle local interprétable autour de l'instance à expliquer.
+
+Approche :
+
+Perturbations locales de l'input
+Prédictions sur ces variations
+Ajustement d'un modèle linéaire local
+Attention Visualisation : Les poids d'attention des Transformers révèlent quels tokens le modèle "regarde" lors de ses prédictions.
+Saliency Maps : Les saliency maps calculent le gradient de la prédiction par rapport à l'input pour identifier les éléments cruciaux.
+COUNTERFACTUAL EXPLANATIONS : Les explications contrefactuelles répondent à "Que faudrait-il changer minimalement pour obtenir une prédiction différente ?"
+
+
+###############
+Explicabilité pour la fairness
+Explicabilité des biais de genre, detection de mots-clés discriminants, Dashboard d'explicabilité intégré, évaluation de la qualité des explications
+
+###############
+Différents résultats des modèles
+DistillRoberta + RF : 84.2% DistillRoberta + LR : 87.3% DistillRoberta + MLP : 88.60% DistillRoberta + xgb : 89% DistillRoberta + lightGBM : 88.5 % DistillRoberta + Soft voting Ensemble (xgb+LR+MLP) : 90.5% DistillRoberta + xgb + feature selection : 88.6% DistillRoberta + xgb + PCA : 87.9% DistillRoberta+Tabnet : 89.70%
